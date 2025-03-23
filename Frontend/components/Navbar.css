@@ -1,0 +1,141 @@
+@import "./common.css";
+
+:root {
+  --color-primario: #5c4e96;
+  --color-texto: #fff;
+}
+
+/* Contenedor del navbar */
+.navbar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  background-color: var(--color-primario);
+  height: calc(100vh - 60px);
+  transition: width 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estado colapsado: ancho reducido */
+.navbar.collapsed {
+  width: 60px;
+}
+
+/* Estado expandido */
+.navbar.expanded {
+  width: 200px;
+}
+
+/* Lista de enlaces */
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada elemento de la lista con altura fija */
+.navbar-links li {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+/* Enlaces del navbar */
+.navbar-links li a.nav-link {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  transition: all 0.3s ease;
+  justify-content: flex-start;
+}
+
+/* Efecto hover */
+.navbar-links li a.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* Iconos */
+.navbar-links li a.nav-link i {
+  font-size: 18px;
+}
+
+/* Texto de los enlaces */
+.link-text {
+  display: inline-block;
+  max-width: 100px;
+  transition: max-width 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar.collapsed .navbar-links li a.nav-link {
+  justify-content: center;
+}
+
+.navbar.collapsed .link-text {
+  opacity: 0;
+  max-width: 0;
+}
+
+.navbar.expanded .link-text {
+  opacity: 1;
+  max-width: 100px;
+}
+
+/* Toggle button */
+.toggle-button {
+  background: none;
+  border: none;
+  color: var(--color-texto);
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-button.collapsed {
+  transform: rotate(0deg);
+  background-color: var(--color-primario);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.toggle-button.expanded {
+  transform: rotate(180deg);
+  background-color: var(--color-primario);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Enlaces especiales */
+.navbar-links li a.calendar-link {
+  background-color: #6a5aa7;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links li a.calendar-link:hover {
+  background-color: #4a3e79;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    width: 60px;
+  }
+  .navbar-links li {
+    padding: 8px 10px;
+  }
+  .navbar-links li a.nav-link {
+    font-size: 14px;
+  }
+}

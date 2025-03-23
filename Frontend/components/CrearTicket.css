@@ -1,0 +1,80 @@
+/* Estilos para el formulario de creación de ticket */
+
+.crear-ticket-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.crear-ticket-container h1 {
+  color: #5c4e96;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #5c4e96;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #5c4e96;
+  box-shadow: 0 0 5px rgba(92, 78, 150, 0.3);
+  outline: none;
+}
+
+.editor-input {
+  min-height: 150px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.editor-placeholder {
+  color: #aaa;
+  padding: 10px;
+}
+
+form button {
+  background-color: #5c4e96;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #4a3e79;
+  transform: scale(1.05);
+}
+
+form button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}

@@ -1,0 +1,37 @@
+/* Estilos para la estructura principal de la aplicación, con header, navbar y contenido */
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  margin-top: 60px;
+  margin-left: 200px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-layout.collapsed .content {
+  margin-left: 60px;
+}
+
+.main-layout.expanded .content {
+  margin-left: 200px;
+}
+
+.main-layout-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #5c4e96;
+}

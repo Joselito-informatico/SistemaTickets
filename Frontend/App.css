@@ -1,0 +1,92 @@
+/* Variables globales, reset, y estilos básicos para la aplicación */
+:root {
+  --base-font-size: 16px;
+  --small-font-size: 12px;
+  --medium-font-size: 14px;
+  --font-family: 'Arial', sans-serif;
+  --background-color: #f5f6fa;
+  --text-color: #333;
+  --primary-color: #61dafb;
+  --hover-primary-color: #4a90e2;
+  --transition-speed: 0.3s;
+}
+
+html {
+  font-size: var(--base-font-size);
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex: 1;
+  margin-left: 200px;
+  transition: margin-left var(--transition-speed) ease;
+  padding: 20px;
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+.navbar.collapsed ~ .main-container {
+  margin-left: 60px;
+}
+
+.App-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.App-link:hover {
+  color: var(--hover-primary-color);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: var(--medium-font-size);
+  }
+  .App {
+    flex-direction: column;
+  }
+  .navbar {
+    width: 60px;
+  }
+  .navbar + .main-container {
+    margin-left: 60px;
+  }
+  .main-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: var(--small-font-size);
+  }
+  .App-header {
+    font-size: calc(8px + 2vmin);
+    text-align: left;
+  }
+  .main-container {
+    padding: 10px;
+  }
+}

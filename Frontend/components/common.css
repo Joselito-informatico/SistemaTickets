@@ -1,0 +1,65 @@
+/* Variables globales y estilos comunes para botones y modales */
+:root {
+  --color-primario: #5c4e96;
+  --color-secundario: #8060a0;
+  --color-texto: #333;
+  --color-fondo: #fdfdfd;
+  --color-borde: #604c94;
+  --color-resaltado: #f4f1fa;
+  --header-text-color: #f9f9f9;
+  --transition-speed: 0.3s;
+}
+
+/* Botones comunes */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Botones de asignar, cerrar y reabrir en AdminTickets */
+button.assign {
+  background-color: var(--color-secundario);
+  color: #fff;
+}
+
+button.close {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+button.reopen {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 420px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
