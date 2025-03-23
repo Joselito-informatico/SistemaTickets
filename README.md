@@ -8,8 +8,6 @@ Proyecto desarrollado como parte de una práctica profesional. El sistema permit
 
 ## 📸 Capturas de Pantalla
 
-> *(Aquí puedes agregar capturas de pantalla del login, dashboard, lista de tickets, etc.)*
-
 - ![Login](./assets/screenshots/login.png)
 - ![Dashboard](./assets/screenshots/dashboard.png)
 - ![Detalle Ticket](./assets/screenshots/detalle_ticket.png)
@@ -26,7 +24,7 @@ Proyecto desarrollado como parte de una práctica profesional. El sistema permit
 
 ### 🧩 Clonar el repositorio
 
-```bash
+```
 git clone https://github.com/Joselito-informatico/SistemaTickets.git
 cd SistemaTickets
 ```
@@ -35,7 +33,7 @@ cd SistemaTickets
 
 ### 🔧 Configuración del Backend
 
-```bash
+```
 cd Backend
 npm install
 ```
@@ -44,13 +42,13 @@ npm install
 
 ```env
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/sistema-tickets
+MONGO_URI=mongodb:tu_mongo_uri
 JWT_SECRET=tu_clave_secreta
 ```
 
 #### ▶️ Ejecutar el servidor
 
-```bash
+```
 npm run dev
 ```
 
@@ -60,7 +58,7 @@ npm run dev
 
 ### 💻 Configuración del Frontend
 
-```bash
+```
 cd ../Frontend
 npm install
 ```
@@ -73,7 +71,7 @@ REACT_APP_API_URL=http://localhost:5000/api
 
 #### ▶️ Ejecutar el cliente
 
-```bash
+```
 npm start
 ```
 
@@ -83,7 +81,7 @@ npm start
 
 ## 📁 Estructura del Proyecto
 
-```bash
+```
 SistemaTickets/
 ├── Backend/
 │   ├── controllers/
