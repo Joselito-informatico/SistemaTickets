@@ -42,7 +42,6 @@ export const AuthProvider = ({ children }) => {
     localStorage.clear();
     setAuth({ token: null, role: null, email: null, userId: null, nombre: null });
     queryClient.clear();
-    window.location.reload();
   };
 
   return (
